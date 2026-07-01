@@ -32,7 +32,7 @@ export default function SqlFormatter() {
       return
     }
     try {
-      setOutput(format(input, { language: dialect }))
+      setOutput(format(input, { language: dialect, keywordCase: 'upper' }))
       setError('')
     } catch (e) {
       setOutput('')

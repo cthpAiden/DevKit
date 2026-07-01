@@ -2,24 +2,9 @@ import { useState } from 'react'
 import ToolLayout from '../components/ToolLayout'
 import CopyButton from '../components/CopyButton'
 import { areaClass, btnClass, errorClass, labelClass, inputClass } from '../components/ui'
+import { base64Encode, base64Decode } from '../lib/encoding'
 
 type Mode = 'base64' | 'url'
-
-/** Unicode-safe Base64 encode (handles emoji, accents, etc.). */
-function base64Encode(str: string): string {
-  const bytes = new TextEncoder().encode(str)
-  let binary = ''
-  bytes.forEach((b) => {
-    binary += String.fromCharCode(b)
-  })
-  return btoa(binary)
-}
-
-function base64Decode(b64: string): string {
-  const binary = atob(b64.trim())
-  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0))
-  return new TextDecoder().decode(bytes)
-}
 
 export default function Base64Tool() {
   const [mode, setMode] = useState<Mode>('base64')

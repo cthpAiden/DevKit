@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { tools } from '../tools/registry'
+import { toolsByGroup } from '../tools/registry'
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
@@ -37,14 +37,24 @@ export default function Sidebar({
           </div>
         </NavLink>
 
-        <nav className="space-y-1">
+        <nav className="space-y-4">
           <NavLink to="/" end onClick={onClose} className={linkClass}>
             <span className="w-5 text-center">🏠</span> Home
           </NavLink>
-          {tools.map((t) => (
-            <NavLink key={t.id} to={t.path} onClick={onClose} className={linkClass}>
-              <span className="w-5 text-center">{t.icon}</span> {t.name}
-            </NavLink>
+
+          {toolsByGroup.map(({ group, tools }) => (
+            <div key={group}>
+              <div className="mb-1 px-3 text-[0.65rem] font-semibold uppercase tracking-wider text-slate-500">
+                {group}
+              </div>
+              <div className="space-y-1">
+                {tools.map((t) => (
+                  <NavLink key={t.id} to={t.path} onClick={onClose} className={linkClass}>
+                    <span className="w-5 text-center">{t.icon}</span> {t.name}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
           ))}
         </nav>
 

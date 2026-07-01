@@ -6,18 +6,39 @@ browser** — no accounts, no servers, no uploads. Your data never leaves your m
 > 🔗 **Live demo:** `https://<your-username>.github.io/devkit/`
 > _(update this link after your first deploy)_
 
-## Tools
+## Tools (16)
 
+**Text & Docs**
 | Tool | What it does |
 | --- | --- |
 | 📝 Markdown Preview | Live GitHub-flavored Markdown → sanitized HTML |
+| 📊 Text Stats | Character / word / line counts + reading time |
+| 🔤 Case Converter | camelCase, snake_case, kebab-case, and more |
+| 🔀 Text Diff | Compare two texts line by line (LCS diff) |
+| 🅰️ Lorem Ipsum | Generate placeholder text |
+
+**Data & Format**
+| Tool | What it does |
+| --- | --- |
 | 🧩 JSON Formatter | Pretty-print, minify, and validate JSON |
-| 🔍 Regex Tester | Live match highlighting + capture groups |
-| 🔁 Base64 / URL | Encode & decode Base64 and URL-encoding (Unicode-safe) |
-| 🔐 Hash & UUID | SHA-1/256/384/512 hashes and random UUIDs |
-| 🔢 Base Converter | Binary ⇄ octal ⇄ decimal ⇄ hex |
 | 🗄️ SQL Formatter | Beautify SQL queries across dialects |
+| 🔢 Base Converter | Binary ⇄ octal ⇄ decimal ⇄ hex |
 | 🕐 Timestamp | Unix time ⇄ human-readable dates |
+
+**Encoding & Security**
+| Tool | What it does |
+| --- | --- |
+| 🔁 Base64 / URL | Encode & decode Base64 and URL-encoding (Unicode-safe) |
+| 🎫 JWT Decoder | Inspect a JWT's header and payload |
+| 🔐 Hash & UUID | SHA-1/256/384/512 hashes and random UUIDs |
+| 🔑 Password Generator | Strong random passwords via the crypto RNG |
+
+**Web**
+| Tool | What it does |
+| --- | --- |
+| 🔍 Regex Tester | Live match highlighting + capture groups |
+| 🌐 URL Inspector | Break a URL into parts and query parameters |
+| 🎨 Color Converter | HEX ⇄ RGB ⇄ HSL |
 
 ## Tech stack
 
